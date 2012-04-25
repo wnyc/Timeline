@@ -1,0 +1,98 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+  <div id="page">
+    <header id="header">
+      <div class="main-header clearfix">
+        <h1>Balance Media's Vertical Timeline</h1>
+      </div>
+    </header>
+
+
+    <div role="main" class="clearfix">
+
+      <div id="sort-buttons">
+        <a class="sort-newest active" href="#"><span>NEWEST FIRST</span></a>
+        <a class="sort-oldest" href="#"><span>OLDEST FIRST</span></a>
+      </div>
+
+      <div id="timeline">
+
+        <div id="line-container">
+          <div id="line"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+  <script src="js/handlebars.js"></script>
+  <script src="js/tabletop.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+
+  <script id="year-marker-template" type="text/x-handlebars-template">
+    <div class="item year-marker">
+      <div class="inner">
+        <div class="inner2">
+          <div class="timestamp">{{timestamp}}</div>
+          <div class="year">{{year}}</div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script id="post-template" type="text/x-handlebars-template">
+    <div class="item post">
+      <div class="inner">
+        <div class="timestamp">{{timestamp}}</div>
+        <div class="title"><h3>{{title}}</h3></div>
+        <div class="date">{{display_date}}</div>
+        <div class="body">
+          {{#if photo_url}}
+            <img src="{{photo_url}}" alt="">
+          {{/if}}
+          {{#if caption}}
+            <div class="caption">({{caption}})</div>
+          {{/if}}
+          {{#if body}}
+            <div class="text">{{body}}</div>
+          {{/if}}
+          <div class="clearfix">
+            {{#if read_more_url}}
+              <a target="_blank" class="more" href="{{read_more_url}}">READ MORE</a>
+              <div class="share">
+                <a href="#" class="share-trigger"></a>
+                <div class="share-popup">
+                  <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{read_more_url}}" data-text="Tweet" data-count="none">Tweet</a>
+                  <a class="facebook-share-button" name="fb_share" type="button" share_url="{{read_more_url}}">Share</a>
+                </div>
+              </div>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+</body>
+</html>
