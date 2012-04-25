@@ -4,6 +4,8 @@
 
 Timeline utilizes a handful of super cool libraries, including [Tabletop.js](http://github.com/jsoma/tabletop) (for the data storage) and [Isotope](http://isotope.metafizzy.co/) for the layout.
 
+A running example can be found [here](http://builtbybalance.com/github-timeline/).
+
 ## How to Use
 
 ### 1) Set up your data using Tabletop.js
