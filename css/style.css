@@ -9,8 +9,8 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 html, button, input, select, textarea { font-family: Arial, sans-serif; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::-moz-selection { background: #666; color: #fff; text-shadow: none; }
+::selection { background: #666; color: #fff; text-shadow: none; }
 
 a { color: #00e; }
 a:visited { color: #551a8b; }
@@ -296,11 +296,16 @@ body{
 	line-height: 26px;
 }
 
-#sort-buttons{
+#buttons{
 	text-align: center;
 	margin: 30px 0 15px 0;
+	height: 30px;
 }
-#sort-buttons a{
+#buttons div{
+	display: inline;
+	padding: 0 10px;
+}
+#buttons a{
 	width: 126px;
 	height: 28px;
 	border: 1px #adadad solid;
@@ -314,8 +319,8 @@ body{
 	background-color: #FFF;
 	color: #3b3b3b;
 }
-#sort-buttons a.active:hover,
-#sort-buttons a.active{
+#buttons a.active:hover,
+#buttons a.active{
 	background-color: #f6f6f6;
 	color: #a9a9a9;
 	-webkit-box-shadow:  none;
@@ -323,23 +328,25 @@ body{
 	box-shadow:  none;
 	cursor: default;
 }
-#sort-buttons a:hover{
+#buttons a:hover{
 	-webkit-box-shadow:  0px 1px 1px 0px #adadad;
 	-moz-box-shadow:  0px 1px 1px 0px #adadad;
 	box-shadow:  0px 1px 1px 0px #adadad;
 }
-#sort-buttons a span{
+#buttons a span{
 	padding-right: 15px;
 	background-position: right -20px;
 }
-#sort-buttons a.active span{
+#buttons a.active span{
 	background-position: right 4px;
 }
-#sort-buttons a.sort-newest span{
+#buttons a.expand-all span,
+#buttons a.sort-newest span{
 	background-image: url(../img/up-arrows.png);
 	background-repeat: no-repeat;
 }
-#sort-buttons a.sort-oldest span{
+#buttons a.collapse-all span,
+#buttons a.sort-oldest span{
 	background-image: url(../img/down-arrows.png);
 	background-repeat: no-repeat;
 }

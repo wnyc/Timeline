@@ -20,6 +20,7 @@ Create a Google Spreadsheet with the following columns:
 * read more url
 
 **Please note that the the _display date_ column must be in the format _Month day, Year_ (April 25, 2012) for proper javascript parsing.**
+**Also, all columns must be _plain text_ format, including the two date columns.**
 
 Now follow the instructions over at Tabletop.js to publish the Spreadsheet.
 
@@ -27,7 +28,9 @@ The Spreadsheet used in the example index.html file is at [https://docs.google.c
 
 ### 2) Insert the Spreadsheet key into script.js
 
-Find your Spreadsheet key (see Tabletop.js for instructions), and replace the sample key on line 81 of `js/script.js` with the key to your Spreadsheet.
+Find your Spreadsheet key (see Tabletop.js for instructions), and replace the sample key on line 3 of `js/script.js` with the key to your Spreadsheet.
+
+You also need to update the name of the spreadsheet 'sheet' that holds the data on line 4 of 'js/script.js'.
 
 ### 3) Enjoy!
 
